@@ -1,0 +1,83 @@
+.header {
+  height: 34vw;
+  margin: 30px auto;
+  background: url("../../assets/HeaderBgM.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+  top: -30px;
+  
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 15%;
+  left: 6vw;
+  color: #fff;
+  animation: fadeIn 3s;
+}
+
+.header-contents h2 {
+  font-weight: 500;
+  font-size: max(2.5vw, 20px);
+  animation: slideFadeIn 2s ease-in-out;
+}
+
+.header-contents p {
+  font-size: 1.2vw;
+}
+
+.header-contents button {
+  border: none;
+  /* color: #747474; */
+  color: rgb(196, 109, 10);
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  padding: 1vw 2.3vw;
+  background-color: #fff;
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.header-contents button:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1050px) {
+  .header-contents {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-contents {
+    max-width: 65%;
+  }
+  .header-contents p {
+    display: none;
+  }
+  .header-contents button {
+    padding: 1vw 2vw;
+  }
+}
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
